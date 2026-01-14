@@ -7,7 +7,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Initialize the application
   await app.init(
     JsObject{
-        background: "#1099bb".cstring,
+        background: "#1099bb".js,
         resizeTo: window,
     }
   )
@@ -16,15 +16,15 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   document.body.appendChild(app.canvas)
 
   # Load the animation sprite sheet
-  discard await Assets.load("https://pixijs.com/assets/spritesheet/fighter.json")
+  discard await Assets.load("https://pixijs.com/assets/spritesheet/fighter.json".js)
 
   # Create an array of textures from the sprite sheet
   var frames: seq[JsObject]
 
   for i in 0..<30:
-    let val = if i < 10: "0".cstring & jsString(i) else: jsString(i)
+    let val = if i < 10: "0".js & js(i) else: js(i)
     # Magically works since the spritesheet was loaded with the pixi loader
-    frames.add(Texture.from("rollSequence00".cstring & val & ".png".cstring))
+    frames.add(Texture.from("rollSequence00".js & val & ".png".js))
 
   # Create an AnimatedSprite (brings back memories from the days of Flash, right ?)
   let anim = jsNew AnimatedSprite(frames)

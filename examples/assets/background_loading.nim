@@ -7,7 +7,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Initialize the application
   app.init(
     JsObject{
-        background: "#1099bb".cstring,
+        background: "#1099bb".js,
         resizeTo: window,
     }
   ).then(
@@ -17,19 +17,19 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
 
       # Add the assets to load
       Assets.add(JsObject{
-        alias: "flowerTop".cstring,
-        src: "https://pixijs.com/assets/flowerTop.png".cstring,
+        alias: "flowerTop".js,
+        src: "https://pixijs.com/assets/flowerTop.png".js,
       })
       Assets.add(JsObject{
-        alias: "eggHead".cstring,
-        src: "https://pixijs.com/assets/eggHead.png".cstring,
+        alias: "eggHead".js,
+        src: "https://pixijs.com/assets/eggHead.png".js,
       })
 
       # Allow the assets to load in the background
-      Assets.backgroundLoad(["flowerTop".cstring, "eggHead"])
+      Assets.backgroundLoad(["flowerTop".js, "eggHead".js])
 
       # If the background load hasn't loaded this asset yet, calling load forces this asset to load now.
-      Assets.load("eggHead".cstring).then(
+      Assets.load("eggHead".js).then(
         proc (texture: JsObject) =
           # Auxiliar flag for toggling the texture
           var isEggHead = true
@@ -40,17 +40,17 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
           character.anchor.set(0.5)
           character.x = app.screen.width / 2
           character.y = app.screen.height / 2
-          character.eventMode = "static".cstring
-          character.cursor = "pointer".cstring
+          character.eventMode = "static".js
+          character.cursor = "pointer".js
 
           app.stage.addChild(character)
 
-          character.on("pointertap".cstring,
+          character.on("pointertap".js,
             async proc =
               isEggHead = not isEggHead
               # These promise are already resolved in the cache.
               character.texture = await Assets.load(
-                if isEggHead :"eggHead".cstring else: "flowerTop".cstring
+                if isEggHead :"eggHead".js else: "flowerTop".js
               )
           )
       )

@@ -1,7 +1,11 @@
 import std / [jsffi, dom]
 
-proc jsString*(_: SomeNumber): cstring {.importjs: "String(#)".}
+template js*(s: string | SomeNumber): JsObject = toJs(s)
+
 proc appendChild*(_: Node, _: JsObject) {.importjs: "#.appendChild(#)".}
+
+proc `&`*(a, b: JsObject): JsObject {.importjs: "(# + #)"}
+proc `[]`*(obj: JsObject; _: JsObject): JsObject {.importjs: "#[#]"} 
 
 proc `+`*(_, _: SomeNumber | JsObject): JsObject {.importjs: "(# + #)".}
 proc `-`*(_, _: SomeNumber | JsObject): JsObject {.importjs: "(# - #)".}

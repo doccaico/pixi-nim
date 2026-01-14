@@ -16,13 +16,13 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   document.body.appendChild(app.canvas)
 
   # Load the animation sprite sheet
-  discard await Assets.load("https://pixijs.com/assets/spritesheet/mc.json")
+  discard await Assets.load("https://pixijs.com/assets/spritesheet/mc.json".js)
 
   # Create an array to store the textures
   var explosionTextures: seq[JsObject]
 
   for i in 0..<26:
-    let texture = Texture.from("Explosion_Sequence_A ".cstring & jsString(i + 1) & ".png".cstring)
+    let texture = Texture.from("Explosion_Sequence_A ".js & js(i + 1) & ".png".js)
     explosionTextures.add(texture)
 
   # Create and randomly place the animated explosion sprites on the stage

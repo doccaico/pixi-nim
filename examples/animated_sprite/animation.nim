@@ -17,14 +17,15 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
 
   # Load the animation sprite sheet
   let spritesheet = await Assets.load(
-    "https://pixijs.com/assets/spritesheet/0123456789.json",
+    "https://pixijs.com/assets/spritesheet/0123456789.json".js,
   )
 
   # Create an array to store the textures
   var textures: seq[JsObject]
 
   for i in 0..<10:
-    let framekey = "0123456789 ".cstring & jsString(i) & ".ase".cstring
+    # let framekey = "0123456789 ".toJs & jsString(i) & ".ase".toJs
+    let framekey = "0123456789 ".js & js(i) & ".ase".js
     let texture = Texture.from(framekey)
     let time = spritesheet.data.frames[framekey].duration
     textures.add(

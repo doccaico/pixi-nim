@@ -6,7 +6,7 @@ var NTI33555167 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33555177 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI738197610 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI738197602 = {size: 0, kind: 22, base: null, node: null, finalizer: null};
-var NTI570425516 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI570425521 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NNI738197610 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
 NTI738197610.node = NNI738197610;
 var NNI33555177 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
@@ -16,9 +16,9 @@ NTI33555167.node = NNI33555167;
 NTI33555177.base = NTI33555167;
 NTI738197610.base = NTI33555177;
 NTI738197602.base = NTI738197610;
-var NNI570425516 = {kind: 1, offset: "anim0", len: 0, typ: NTI738197602, name: "anim0", sons: null};
-NTI570425516.node = NNI570425516;
-NTI570425516.base = NTI33555167;
+var NNI570425521 = {kind: 1, offset: "anim0", len: 0, typ: NTI738197602, name: "anim0", sons: null};
+NTI570425521.node = NNI570425521;
+NTI570425521.base = NTI33555167;
 var objectID_805306546 = [0];
 
 function innerHEX60gensym9__spritesheet_u54() {
@@ -27,7 +27,7 @@ function innerHEX60gensym9__spritesheet_u54() {
   BeforeRet: {
     var a_570425400 = null;
     a_570425400 = {};
-    a_570425400.background = "#1099bb";
+    a_570425400.background = ("#1099bb");
     a_570425400.resizeTo = window;
     result_570425399 = a_570425400;
     break BeforeRet;
@@ -37,7 +37,7 @@ function innerHEX60gensym9__spritesheet_u54() {
 
 }
 
-function HEX3Aanonymous__spritesheet_u212() {
+function HEX3Aanonymous__spritesheet_u234() {
     (this.anim0.rotation += 0.01);
 
   
@@ -47,41 +47,41 @@ async function HEX3Aanonymous__spritesheet_u27(e_p0) {
             var Temporary4;
     var Temporary5;
 
-    var HEX3Aenv_570425704 = null;
-    HEX3Aenv_570425704 = {m_type: NTI570425516, anim0: null};
+    var HEX3Aenv_570425726 = null;
+    HEX3Aenv_570425726 = {m_type: NTI570425521, anim0: null};
     var app_570425385 = (new PIXI.Application());
     (await app_570425385.init(innerHEX60gensym9__spritesheet_u54()));
     document.body.appendChild(app_570425385.canvas);
-    ((await PIXI.Assets.load("https://pixijs.com/assets/spritesheet/fighter.json")));
-    var frames_570425447 = [];
+    ((await PIXI.Assets.load(("https://pixijs.com/assets/spritesheet/fighter.json"))));
+    var frames_570425455 = [];
     Label1: {
-      var i_570425452 = 0;
-      var i_570425753 = 0;
+      var i_570425460 = 0;
+      var i_570425775 = 0;
       Label2: {
           Label3: while (true) {
-          if (!(i_570425753 < 30)) break Label3;
-            i_570425452 = i_570425753;
-            if ((i_570425452 < 10)) {
-            Temporary4 = ("0" + String(i_570425452));
+          if (!(i_570425775 < 30)) break Label3;
+            i_570425460 = i_570425775;
+            if ((i_570425460 < 10)) {
+            Temporary4 = (("0") + (i_570425460));
             }
             else {
-            Temporary4 = String(i_570425452);
+            Temporary4 = (i_570425460);
             }
             
-            var val_570425459 = Temporary4;
-            frames_570425447.push(PIXI.Texture.from((("rollSequence00" + val_570425459) + ".png")));;
-            i_570425753 += 1;
+            var val_570425473 = Temporary4;
+            frames_570425455.push(PIXI.Texture.from(((("rollSequence00") + val_570425473) + (".png"))));;
+            i_570425775 += 1;
           }
       };
     };
-    HEX3Aenv_570425704.anim0 = (new PIXI.AnimatedSprite(frames_570425447));
-    HEX3Aenv_570425704.anim0.x = (app_570425385.screen.width / 2);
-    HEX3Aenv_570425704.anim0.y = (app_570425385.screen.height / 2);
-    HEX3Aenv_570425704.anim0.anchor.set((0.5));
-    HEX3Aenv_570425704.anim0.animationSpeed = 0.5;
-    HEX3Aenv_570425704.anim0.play();
-    app_570425385.stage.addChild((HEX3Aenv_570425704.anim0));
-    Temporary5 = HEX3Aanonymous__spritesheet_u212.bind(HEX3Aenv_570425704); Temporary5.ClP_0 = HEX3Aanonymous__spritesheet_u212; Temporary5.ClE_0 = HEX3Aenv_570425704;
+    HEX3Aenv_570425726.anim0 = (new PIXI.AnimatedSprite(frames_570425455));
+    HEX3Aenv_570425726.anim0.x = (app_570425385.screen.width / 2);
+    HEX3Aenv_570425726.anim0.y = (app_570425385.screen.height / 2);
+    HEX3Aenv_570425726.anim0.anchor.set((0.5));
+    HEX3Aenv_570425726.anim0.animationSpeed = 0.5;
+    HEX3Aenv_570425726.anim0.play();
+    app_570425385.stage.addChild((HEX3Aenv_570425726.anim0));
+    Temporary5 = HEX3Aanonymous__spritesheet_u234.bind(HEX3Aenv_570425726); Temporary5.ClP_0 = HEX3Aanonymous__spritesheet_u234; Temporary5.ClE_0 = HEX3Aenv_570425726;
     app_570425385.ticker.add((Temporary5));
 
   
