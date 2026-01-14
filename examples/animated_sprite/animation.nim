@@ -1,8 +1,8 @@
-import pixi
+import PIXI
 
 dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Create a new application
-  let app = jsNew Application()
+  let app = Application()
 
   # Initialize the application
   await app.init(
@@ -16,7 +16,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   document.body.appendChild(app.canvas);
 
   # Load the animation sprite sheet
-  let spritesheet = await Assets.load(
+  let spritesheet = await AssetsLoad(
     "https://pixijs.com/assets/spritesheet/0123456789.json".js,
   )
 
@@ -26,7 +26,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   for i in 0..<10:
     # let framekey = "0123456789 ".toJs & jsString(i) & ".ase".toJs
     let framekey = "0123456789 ".js & js(i) & ".ase".js
-    let texture = Texture.from(framekey)
+    let texture = TextureFrom(framekey)
     let time = spritesheet.data.frames[framekey].duration
     textures.add(
       JsObject{
@@ -38,7 +38,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   let scaling = 4
 
   # Create a slow AnimatedSprite
-  let slow = jsNew AnimatedSprite(textures)
+  let slow = AnimatedSprite(textures)
 
   slow.anchor.set(0.5)
   slow.scale.set(scaling)
@@ -49,7 +49,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   app.stage.addChild(slow)
 
   # Create a fast AnimatedSprite
-  let fast = jsNew AnimatedSprite(textures)
+  let fast = AnimatedSprite(textures)
 
   fast.anchor.set(0.5)
   fast.scale.set(scaling)

@@ -1,11 +1,11 @@
-import pixi
+import PIXI
 
 proc init {.async.} =
   # Create a new application
-  let app = jsNew Application()
+  let app = Application()
 
   # Initialize the application
-  await app.init(
+  await app.ApplicationInit(
     JsObject{
         background: "#1099bb".js,
         resizeTo: window,
@@ -16,10 +16,10 @@ proc init {.async.} =
   document.body.appendChild(app.canvas)
 
   # Load the bunny texture
-  let texture = await Assets.load("https://pixijs.com/assets/bunny.png".js)
+  let texture = await AssetsLoad("https://pixijs.com/assets/bunny.png".js)
 
   # Create a new Sprite from the awaited loaded Texture
-  let bunny = Sprite.from(texture)
+  let bunny = SpriteFrom(texture)
 
   # Center the sprite's anchor point
   bunny.anchor.set(0.5)

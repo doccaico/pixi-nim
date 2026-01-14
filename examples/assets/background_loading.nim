@@ -1,41 +1,41 @@
-import pixi
+import PIXI
 
 dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Create a new application
-  let app = jsNew Application()
+  let app = Application()
 
   # Initialize the application
-  app.init(
+  app.ApplicationInit(
     JsObject{
         background: "#1099bb".js,
         resizeTo: window,
     }
-  ).then(
+  ).ApplicationThen(
     proc =
       # Append the application canvas to the document body
       document.body.appendChild(app.canvas)
 
       # Add the assets to load
-      Assets.add(JsObject{
+      AssetsAdd(JsObject{
         alias: "flowerTop".js,
         src: "https://pixijs.com/assets/flowerTop.png".js,
       })
-      Assets.add(JsObject{
+      AssetsAdd(JsObject{
         alias: "eggHead".js,
         src: "https://pixijs.com/assets/eggHead.png".js,
       })
 
       # Allow the assets to load in the background
-      Assets.backgroundLoad(["flowerTop".js, "eggHead".js])
+      AssetsBackgroundLoad(["flowerTop".js, "eggHead".js])
 
       # If the background load hasn't loaded this asset yet, calling load forces this asset to load now.
-      Assets.load("eggHead".js).then(
+      AssetsLoad("eggHead".js).AssetsThen(
         proc (texture: JsObject) =
           # Auxiliar flag for toggling the texture
           var isEggHead = true
 
           # Create a new Sprite from the resolved loaded texture
-          let character = jsNew Sprite(texture)
+          let character = Sprite(texture)
 
           character.anchor.set(0.5)
           character.x = app.screen.width / 2
@@ -49,7 +49,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
             async proc =
               isEggHead = not isEggHead
               # These promise are already resolved in the cache.
-              character.texture = await Assets.load(
+              character.texture = await AssetsLoad(
                 if isEggHead :"eggHead".js else: "flowerTop".js
               )
           )

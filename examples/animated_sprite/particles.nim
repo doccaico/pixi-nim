@@ -1,8 +1,8 @@
-import pixi
+import PIXI
 
 dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Create a new application
-  let app = jsNew Application()
+  let app = Application()
 
   # Initialize the application
   await app.init(
@@ -16,26 +16,26 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   document.body.appendChild(app.canvas)
 
   # Load the animation sprite sheet
-  discard await Assets.load("https://pixijs.com/assets/spritesheet/mc.json".js)
+  discard await AssetsLoad("https://pixijs.com/assets/spritesheet/mc.json".js)
 
   # Create an array to store the textures
   var explosionTextures: seq[JsObject]
 
   for i in 0..<26:
-    let texture = Texture.from("Explosion_Sequence_A ".js & js(i + 1) & ".png".js)
+    let texture = TextureFrom("Explosion_Sequence_A ".js & js(i + 1) & ".png".js)
     explosionTextures.add(texture)
 
   # Create and randomly place the animated explosion sprites on the stage
   for i in 0..<50:
     # Create an explosion AnimatedSprite
-    let explosion = jsNew AnimatedSprite(explosionTextures)
+    let explosion = AnimatedSprite(explosionTextures)
 
-    explosion.x = Math.random() * app.screen.width
-    explosion.y = Math.random() * app.screen.height
+    explosion.x = MathRandom() * app.screen.width
+    explosion.y = MathRandom() * app.screen.height
     explosion.anchor.set(0.5)
-    explosion.rotation = Math.random() * Math.PI
-    explosion.scale.set(0.75 + Math.random() * 0.5)
-    explosion.gotoAndPlay((Math.random() * 26) | 0)
+    explosion.rotation = MathRandom() * MathPI
+    explosion.scale.set(0.75 + MathRandom() * 0.5)
+    explosion.gotoAndPlay((MathRandom() * 26) | 0)
     app.stage.addChild(explosion)
 
   # Start animating

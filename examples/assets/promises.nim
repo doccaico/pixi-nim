@@ -2,10 +2,10 @@ import pixi
 
 dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Create a new application
-  let app = jsNew Application()
+  let app = Application()
 
   # Initialize the application
-  await app.init(
+  await app.ApplicationInit(
     JsObject{
         background: "#1099bb".js,
         resizeTo: window,
@@ -16,13 +16,13 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   document.body.appendChild(app.canvas)
 
   # Start loading right away and create a promise
-  let texturePromise = Assets.load("https://pixijs.com/assets/bunny.png".js)
+  let texturePromise = AssetsLoad("https://pixijs.com/assets/bunny.png".js)
 
   # When the promise resolves, we have the texture!
-  texturePromise.then(
+  texturePromise.TextureThen(
     proc (resolvedTexture: JsObject) =
       # create a new Sprite from the resolved loaded Texture
-      let bunny = Sprite.from(resolvedTexture)
+      let bunny = SpriteFrom(resolvedTexture)
 
       # center the sprite's anchor point
       bunny.anchor.set(0.5)

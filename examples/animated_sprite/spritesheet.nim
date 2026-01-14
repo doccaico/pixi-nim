@@ -1,8 +1,8 @@
-import pixi
+import PIXI
 
 dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Create a new application
-  let app = jsNew Application()
+  let app = Application()
 
   # Initialize the application
   await app.init(
@@ -16,7 +16,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   document.body.appendChild(app.canvas)
 
   # Load the animation sprite sheet
-  discard await Assets.load("https://pixijs.com/assets/spritesheet/fighter.json".js)
+  discard await AssetsLoad("https://pixijs.com/assets/spritesheet/fighter.json".js)
 
   # Create an array of textures from the sprite sheet
   var frames: seq[JsObject]
@@ -24,10 +24,10 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   for i in 0..<30:
     let val = if i < 10: "0".js & js(i) else: js(i)
     # Magically works since the spritesheet was loaded with the pixi loader
-    frames.add(Texture.from("rollSequence00".js & val & ".png".js))
+    frames.add(TextureFrom("rollSequence00".js & val & ".png".js))
 
   # Create an AnimatedSprite (brings back memories from the days of Flash, right ?)
-  let anim = jsNew AnimatedSprite(frames)
+  let anim = AnimatedSprite(frames)
 
   #[
    * An AnimatedSprite inherits all the properties of a PIXI sprite

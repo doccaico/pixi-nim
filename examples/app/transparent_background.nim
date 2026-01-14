@@ -1,11 +1,11 @@
-import pixi
+import PIXI
 
 dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Create a new application
-  let app = jsNew Application()
+  let app = Application()
 
   # Initialize the application with a transparent background
-  await app.init(
+  await app.ApplicationInit(
     JsObject{
         backgroundAlpha: 0,
         resizeTo: window,
@@ -16,10 +16,10 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   document.body.appendChild(app.canvas)
 
   # Load the bunny texture
-  let texture = await Assets.load("https://pixijs.com/assets/bunny.png".js)
+  let texture = await AssetsLoad("https://pixijs.com/assets/bunny.png".js)
 
   # Create a new Sprite with the texture
-  let bunny = jsNew Sprite(texture)
+  let bunny = Sprite(texture)
 
   # Center the sprite's anchor point
   bunny.anchor.set(0.5)

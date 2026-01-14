@@ -1,15 +1,15 @@
-import pixi
+import PIXI
 
 proc makeLoadScreen {.async.}
 proc makeGameScreen {.async.}
 
 # Create a new application
-let app = jsNew Application()
+let app = Application()
 
 proc init {.async.} =
 
   # Initialize the application
-  await app.init(
+  await app.ApplicationInit(
     JsObject{
         background: "#1099bb".js,
         resizeTo: window,
@@ -43,20 +43,20 @@ proc init {.async.} =
     ],
   }
 
-  await Assets.init(JsObject{ manifest: manifestExample })
+  await AssetsInit(JsObject{ manifest: manifestExample })
 
   # Bundles can be loaded in the background too!
-  Assets.backgroundLoadBundle(["load-screen".js, "game-screen".js])
+  AssetsBackgroundLoadBundle(["load-screen".js, "game-screen".js])
 
   discard makeLoadScreen()
 
 proc makeLoadScreen {.async.} =
   # Get the assets from the load screen bundle.
   # If the bundle was already downloaded the promise resolves instantly!
-  let loadScreenAssets = await Assets.loadBundle("load-screen".js)
+  let loadScreenAssets = await AssetsLoadBundle("load-screen".js)
 
   # Create a new Sprite from the resolved loaded texture
-  let goNext = jsNew Sprite(loadScreenAssets.flowerTop)
+  let goNext = Sprite(loadScreenAssets.flowerTop)
 
   goNext.anchor.set(0.5)
   goNext.x = app.screen.width / 2
@@ -76,10 +76,10 @@ proc makeGameScreen {.async.} =
   # Wait here until you get the assets
   # If the user spends enough time in the load screen by the time they reach the game screen
   # the assets are completely loaded and the promise resolves instantly!
-  let loadScreenAssets = await Assets.loadBundle("game-screen".js)
+  let loadScreenAssets = await AssetsLoadBundle("game-screen".js)
 
   # Create a new Sprite from the resolved loaded texture
-  let goBack = jsNew Sprite(loadScreenAssets.eggHead)
+  let goBack = Sprite(loadScreenAssets.eggHead)
 
   goBack.anchor.set(0.5)
   goBack.x = app.screen.width / 2
