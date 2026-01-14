@@ -1,12 +1,16 @@
 import std / [jsffi, asyncjs]
 
-var Assets* {.importc, nodecl.}: JsObject
+proc init*(_: JsObject): Future[void] {.importjs: "PIXI.Assets.init(#)".}
 
-proc load*(_: JsObject, _: JsObject): Future[JsObject] {.importjs: "PIXI.#.load(#)".}
-proc load*(_: JsObject, _: openArray[JsObject]): Future[JsObject] {.importjs: "PIXI.#.load(#)".}
+proc load*(_: JsObject): Future[JsObject] {.importjs: "PIXI.Assets.load(#)".}
+proc load*(_: openArray[JsObject]): Future[JsObject] {.importjs: "PIXI.Assets.load(#)".}
 
-proc backgroundLoad*(_: JsObject, _: openArray[JsObject]) {.importjs: "PIXI.#.backgroundLoad(#)".}
+proc loadBundle*(_: JsObject): Future[JsObject] {.importjs: "PIXI.Assets.loadBundle(#)".} 
 
-proc add*(_, _: JsObject) {.importjs: "PIXI.#.add(#)".}
+proc backgroundLoad*(_: openArray[JsObject]) {.importjs: "PIXI.Assets.backgroundLoad(#)".}
+
+proc backgroundLoadBundle*(_: openArray[JsObject]) {.importjs: "PIXI.Assets.backgroundLoadBundle(#)".} 
+
+proc add*(_: JsObject) {.importjs: "PIXI.Assets.add(#)".}
 
 proc then*(_: Future[JsObject], _: proc(_: JsObject)) {.importjs: "#.then(#)".}
