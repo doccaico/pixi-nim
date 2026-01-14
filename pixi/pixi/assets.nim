@@ -9,4 +9,4 @@ proc backgroundLoad*(_: JsObject, _: openArray[cstring]) {.importjs: "PIXI.#.bac
 
 proc add*(_, _: JsObject) {.importjs: "PIXI.#.add(#)".}
 
-proc then*(a: Future[JsObject], _: proc(a: JsObject)) {.importjs: "#.then(#)".}
+proc then*(_: Future[JsObject], _: proc(_: JsObject)) {.importjs: "#.then(#)".}

@@ -2,15 +2,44 @@
 var framePtr = null;
 var excHandler = 0;
 var lastJSError = null;
+var NTI33554466 = {size: 0,kind: 1,base: null,node: null,finalizer: null};
+var NTI570425538 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI570425533 = {size: 0, kind: 22, base: null, node: null, finalizer: null};
+var NTI570425536 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI33555167 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI33555177 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI738197610 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI738197602 = {size: 0, kind: 22, base: null, node: null, finalizer: null};
+var NTI570425534 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NNI738197610 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI738197610.node = NNI738197610;
+var NNI33555177 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI33555177.node = NNI33555177;
+var NNI33555167 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
+NTI33555167.node = NNI33555167;
+NTI33555177.base = NTI33555167;
+NTI738197610.base = NTI33555177;
+NTI738197602.base = NTI738197610;
+var NNI570425534 = {kind: 1, offset: "app0", len: 0, typ: NTI738197602, name: "app0", sons: null};
+NTI570425534.node = NNI570425534;
+NTI570425534.base = NTI33555167;
+NTI570425533.base = NTI570425534;
+var NNI570425536 = {kind: 1, offset: "HEX3Aup", len: 0, typ: NTI570425533, name: ":up", sons: null};
+NTI570425536.node = NNI570425536;
+NTI570425536.base = NTI33555167;
+var NNI570425538 = {kind: 2, len: 2, offset: 0, typ: null, name: null, sons: [{kind: 1, offset: "isEggHead0", len: 0, typ: NTI33554466, name: "isEggHead0", sons: null}, 
+{kind: 1, offset: "character1", len: 0, typ: NTI738197602, name: "character1", sons: null}]};
+NTI570425538.node = NNI570425538;
+NTI570425538.base = NTI33555167;
 var objectID_805306546 = [0];
 
-function innerHEX60gensym9__particles_u54() {
+function innerHEX60gensym9__background95loading_u54() {
   var result_570425399 = null;
 
   BeforeRet: {
     var a_570425400 = null;
     a_570425400 = {};
-    a_570425400.autoStart = false;
+    a_570425400.background = "#1099bb";
     a_570425400.resizeTo = window;
     result_570425399 = a_570425400;
     break BeforeRet;
@@ -19,48 +48,106 @@ function innerHEX60gensym9__particles_u54() {
   return result_570425399;
 
 }
-var Temporary1;
-async function HEX3Aanonymous__particles_u27(e_p0) {
-    var app_570425385 = (new PIXI.Application());
-    (await app_570425385.init(innerHEX60gensym9__particles_u54()));
-    document.body.appendChild(app_570425385.canvas);
-    ((await PIXI.Assets.load("https://pixijs.com/assets/spritesheet/mc.json")));
-    var explosionTextures_570425447 = [];
-    Label1: {
-      var i_570425452 = 0;
-      var i_570425715 = 0;
-      Label2: {
-          Label3: while (true) {
-          if (!(i_570425715 < 26)) break Label3;
-            i_570425452 = i_570425715;
-            var texture_570425456 = PIXI.Texture.from((("Explosion_Sequence_A " + String((i_570425452 + 1))) + ".png"));
-            explosionTextures_570425447.push(texture_570425456);;
-            i_570425715 += 1;
-          }
-      };
-    };
-    Label4: {
-      var i_570425465 = 0;
-      var i_570425718 = 0;
-      Label5: {
-          Label6: while (true) {
-          if (!(i_570425718 < 50)) break Label6;
-            i_570425465 = i_570425718;
-            var explosion_570425469 = (new PIXI.AnimatedSprite(explosionTextures_570425447));
-            explosion_570425469.x = (Math.random() * app_570425385.screen.width);
-            explosion_570425469.y = (Math.random() * app_570425385.screen.height);
-            explosion_570425469.anchor.set((0.5));
-            explosion_570425469.rotation = (Math.random() * Math.PI);
-            explosion_570425469.scale.set(((0.75 + (Math.random() * 0.5))));
-            explosion_570425469.gotoAndPlay((((Math.random() * 26) | 0)));
-            app_570425385.stage.addChild((explosion_570425469));
-            i_570425718 += 1;
-          }
-      };
-    };
-    app_570425385.start();
+
+function innerHEX60gensym21__background95loading_u98() {
+  var result_570425443 = null;
+
+  BeforeRet: {
+    var a_570425444 = null;
+    a_570425444 = {};
+    a_570425444.alias = "flowerTop";
+    a_570425444.src = "https://pixijs.com/assets/flowerTop.png";
+    result_570425443 = a_570425444;
+    break BeforeRet;
+  };
+
+  return result_570425443;
+
+}
+
+function innerHEX60gensym32__background95loading_u129() {
+  var result_570425474 = null;
+
+  BeforeRet: {
+    var a_570425475 = null;
+    a_570425475 = {};
+    a_570425475.alias = "eggHead";
+    a_570425475.src = "https://pixijs.com/assets/eggHead.png";
+    result_570425474 = a_570425475;
+    break BeforeRet;
+  };
+
+  return result_570425474;
+
+}
+async function HEX3Aanonymous__background95loading_u258() {
+    var Temporary1;
+
+  var result_570425604 = null;
+
+  BeforeRet: {
+    this.isEggHead0 = !(this.isEggHead0);
+    if (this.isEggHead0) {
+    Temporary1 = "eggHead";
+    }
+    else {
+    Temporary1 = "flowerTop";
+    }
+    
+    this.character1.texture = (await PIXI.Assets.load(Temporary1));
+    result_570425604 = undefined;
+    break BeforeRet;
+  };
+
+  return result_570425604;
+
+}
+
+function HEX3Aanonymous__background95loading_u158(texture_p0) {
+    var Temporary1;
+
+    var HEX3Aenv_570425770 = null;
+    HEX3Aenv_570425770 = {m_type: NTI570425538, isEggHead0: false, character1: null};
+    HEX3Aenv_570425770.isEggHead0 = true;
+    HEX3Aenv_570425770.character1 = (new PIXI.Sprite(texture_p0));
+    HEX3Aenv_570425770.character1.anchor.set((0.5));
+    HEX3Aenv_570425770.character1.x = (this.HEX3Aup.app0.screen.width / 2);
+    HEX3Aenv_570425770.character1.y = (this.HEX3Aup.app0.screen.height / 2);
+    HEX3Aenv_570425770.character1.eventMode = "static";
+    HEX3Aenv_570425770.character1.cursor = "pointer";
+    this.HEX3Aup.app0.stage.addChild((HEX3Aenv_570425770.character1));
+    Temporary1 = HEX3Aanonymous__background95loading_u258.bind(HEX3Aenv_570425770); Temporary1.ClP_0 = HEX3Aanonymous__background95loading_u258; Temporary1.ClE_0 = HEX3Aenv_570425770;
+    HEX3Aenv_570425770.character1.on(("pointertap"), (Temporary1));
 
   
 }
-Temporary1 = HEX3Aanonymous__particles_u27.bind(null); Temporary1.ClP_0 = HEX3Aanonymous__particles_u27; Temporary1.ClE_0 = null;
+
+function HEX3Aanonymous__background95loading_u92() {
+    var Temporary1;
+
+    var HEX3Aenv_570425819 = null;
+    HEX3Aenv_570425819 = {m_type: NTI570425536, HEX3Aup: null};
+    HEX3Aenv_570425819.HEX3Aup = this;
+    document.body.appendChild(this.app0.canvas);
+    PIXI.Assets.add(innerHEX60gensym21__background95loading_u98());
+    PIXI.Assets.add(innerHEX60gensym32__background95loading_u129());
+    PIXI.Assets.backgroundLoad(["flowerTop", "eggHead"]);
+    Temporary1 = HEX3Aanonymous__background95loading_u158.bind(HEX3Aenv_570425819); Temporary1.ClP_0 = HEX3Aanonymous__background95loading_u158; Temporary1.ClE_0 = HEX3Aenv_570425819;
+    PIXI.Assets.load("eggHead").then(Temporary1);
+
+  
+}
+var Temporary1;
+async function HEX3Aanonymous__background95loading_u27(e_p0) {
+    var Temporary1;
+
+    var HEX3Aenv_570425769 = null;
+    HEX3Aenv_570425769 = {m_type: NTI570425534, app0: null};
+    HEX3Aenv_570425769.app0 = (new PIXI.Application());
+    Temporary1 = HEX3Aanonymous__background95loading_u92.bind(HEX3Aenv_570425769); Temporary1.ClP_0 = HEX3Aanonymous__background95loading_u92; Temporary1.ClE_0 = HEX3Aenv_570425769;
+    HEX3Aenv_570425769.app0.init(innerHEX60gensym9__background95loading_u54()).then(Temporary1);
+
+  
+}
+Temporary1 = HEX3Aanonymous__background95loading_u27.bind(null); Temporary1.ClP_0 = HEX3Aanonymous__background95loading_u27; Temporary1.ClE_0 = null;
 window.onload = Temporary1;
