@@ -2,13 +2,13 @@
 var framePtr = null;
 var excHandler = 0;
 var lastJSError = null;
-var NTI570425724 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
-var NTI570425695 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI570425544 = {size: 0, kind: 22, base: null, node: null, finalizer: null};
+var NTI570425547 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33555167 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33555177 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI738197610 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI738197602 = {size: 0, kind: 22, base: null, node: null, finalizer: null};
-var NTI570425666 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI570425545 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NNI738197610 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
 NTI738197610.node = NNI738197610;
 var NNI33555177 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
@@ -18,211 +18,104 @@ NTI33555167.node = NNI33555167;
 NTI33555177.base = NTI33555167;
 NTI738197610.base = NTI33555177;
 NTI738197602.base = NTI738197610;
-var NNI570425666 = {kind: 1, offset: "manifestExample0", len: 0, typ: NTI738197602, name: "manifestExample0", sons: null};
-NTI570425666.node = NNI570425666;
-NTI570425666.base = NTI33555167;
-var NNI570425695 = {kind: 1, offset: "goNext0", len: 0, typ: NTI738197602, name: "goNext0", sons: null};
-NTI570425695.node = NNI570425695;
-NTI570425695.base = NTI33555167;
-var NNI570425724 = {kind: 1, offset: "goBack0", len: 0, typ: NTI738197602, name: "goBack0", sons: null};
-NTI570425724.node = NNI570425724;
-NTI570425724.base = NTI33555167;
+var NNI570425545 = {kind: 1, offset: "app0", len: 0, typ: NTI738197602, name: "app0", sons: null};
+NTI570425545.node = NNI570425545;
+NTI570425545.base = NTI33555167;
+NTI570425544.base = NTI570425545;
+var NNI570425547 = {kind: 1, offset: "HEX3Aup", len: 0, typ: NTI570425544, name: ":up", sons: null};
+NTI570425547.node = NNI570425547;
+NTI570425547.base = NTI33555167;
 var objectID_805306546 = [0];
 
-function innerHEX60gensym12__manifest95bundles_u53() {
-  var result_570425398 = null;
+function innerHEX60gensym9__multi95loading_u54() {
+  var result_570425399 = null;
 
   BeforeRet: {
-    var a_570425399 = null;
-    a_570425399 = {};
-    a_570425399.background = ("#1099bb");
-    a_570425399.resizeTo = window;
-    result_570425398 = a_570425399;
+    var a_570425400 = null;
+    a_570425400 = {};
+    a_570425400.background = ("#1099bb");
+    a_570425400.resizeTo = window;
+    result_570425399 = a_570425400;
     break BeforeRet;
   };
 
-  return result_570425398;
+  return result_570425399;
 
 }
 
-function innerHEX60gensym46__manifest95bundles_u149() {
-  var result_570425494 = null;
+function innerHEX60gensym23__multi95loading_u102() {
+  var result_570425447 = null;
 
   BeforeRet: {
-    var a_570425495 = null;
-    a_570425495 = {};
-    a_570425495.alias = ("flowerTop");
-    a_570425495.src = ("https://pixijs.com/assets/flowerTop.png");
-    result_570425494 = a_570425495;
+    var a_570425448 = null;
+    a_570425448 = {};
+    a_570425448.alias = ("flowerTop");
+    a_570425448.src = ("https://pixijs.com/assets/flowerTop.png");
+    result_570425447 = a_570425448;
     break BeforeRet;
   };
 
-  return result_570425494;
+  return result_570425447;
 
 }
 
-function innerHEX60gensym33__manifest95bundles_u118() {
-  var result_570425463 = null;
+function innerHEX60gensym38__multi95loading_u141() {
+  var result_570425486 = null;
 
   BeforeRet: {
-    var a_570425464 = null;
-    a_570425464 = {};
-    a_570425464.name = ("load-screen");
-    a_570425464.assets = [innerHEX60gensym46__manifest95bundles_u149()];
-    result_570425463 = a_570425464;
+    var a_570425487 = null;
+    a_570425487 = {};
+    a_570425487.alias = ("eggHead");
+    a_570425487.src = ("https://pixijs.com/assets/eggHead.png");
+    result_570425486 = a_570425487;
     break BeforeRet;
   };
 
-  return result_570425463;
+  return result_570425486;
 
 }
 
-function innerHEX60gensym74__manifest95bundles_u239() {
-  var result_570425584 = null;
-
-  BeforeRet: {
-    var a_570425585 = null;
-    a_570425585 = {};
-    a_570425585.alias = ("eggHead");
-    a_570425585.src = ("https://pixijs.com/assets/eggHead.png");
-    result_570425584 = a_570425585;
-    break BeforeRet;
-  };
-
-  return result_570425584;
-
-}
-
-function innerHEX60gensym61__manifest95bundles_u208() {
-  var result_570425553 = null;
-
-  BeforeRet: {
-    var a_570425554 = null;
-    a_570425554 = {};
-    a_570425554.name = ("game-screen");
-    a_570425554.assets = [innerHEX60gensym74__manifest95bundles_u239()];
-    result_570425553 = a_570425554;
-    break BeforeRet;
-  };
-
-  return result_570425553;
-
-}
-
-function innerHEX60gensym24__manifest95bundles_u104() {
-  var result_570425449 = null;
-
-  BeforeRet: {
-    var a_570425450 = null;
-    a_570425450 = {};
-    a_570425450.bundles = [innerHEX60gensym33__manifest95bundles_u118(), innerHEX60gensym61__manifest95bundles_u208()];
-    result_570425449 = a_570425450;
-    break BeforeRet;
-  };
-
-  return result_570425449;
-
-}
-
-function innerHEX60gensym87__manifest95bundles_u303() {
-  var result_570425648 = null;
-
-  BeforeRet: {
-    var a_570425649 = null;
-    a_570425649 = {};
-    a_570425649.manifest = this.manifestExample0;
-    result_570425648 = a_570425649;
-    break BeforeRet;
-  };
-
-  return result_570425648;
-
-}
-
-function HEX3Aanonymous__manifest95bundles_u685() {
-    this.goBack0.destroy();
-    (makeLoadScreen__manifest95bundles_u24());
+function HEX3Aanonymous__multi95loading_u187(textures_p0) {
+    var flower_570425536 = PIXI.Sprite.from(textures_p0.flowerTop);
+    flower_570425536.anchor.set((0.5));
+    flower_570425536.x = (this.HEX3Aup.app0.screen.width * 0.25);
+    flower_570425536.y = (this.HEX3Aup.app0.screen.height / 2);
+    this.HEX3Aup.app0.stage.addChild((flower_570425536));
+    var egg_570425612 = PIXI.Sprite.from(textures_p0.eggHead);
+    egg_570425612.anchor.set((0.5));
+    egg_570425612.x = (this.HEX3Aup.app0.screen.width * 0.75);
+    egg_570425612.y = (this.HEX3Aup.app0.screen.height / 2);
+    this.HEX3Aup.app0.stage.addChild((egg_570425612));
 
   
 }
-async function makeGameScreen__manifest95bundles_u26() {
+
+function HEX3Aanonymous__multi95loading_u96() {
     var Temporary1;
 
-  var result_570425907 = null;
-
-  BeforeRet: {
-    var HEX3Aenv_570426155 = null;
-    HEX3Aenv_570426155 = {m_type: NTI570425724, goBack0: null};
-    var loadScreenAssets_570425921 = (await PIXI.Assets.loadBundle(("game-screen")));
-    HEX3Aenv_570426155.goBack0 = (new PIXI.Sprite(loadScreenAssets_570425921.eggHead));
-    HEX3Aenv_570426155.goBack0.anchor.set((0.5));
-    HEX3Aenv_570426155.goBack0.x = (app_570425375.screen.width / 2);
-    HEX3Aenv_570426155.goBack0.y = (app_570425375.screen.height / 2);
-    app_570425375.stage.addChild((HEX3Aenv_570426155.goBack0));
-    HEX3Aenv_570426155.goBack0.eventMode = ("static");
-    HEX3Aenv_570426155.goBack0.cursor = ("pointer");
-    Temporary1 = HEX3Aanonymous__manifest95bundles_u685.bind(HEX3Aenv_570426155); Temporary1.ClP_0 = HEX3Aanonymous__manifest95bundles_u685; Temporary1.ClE_0 = HEX3Aenv_570426155;
-    HEX3Aenv_570426155.goBack0.on((("pointertap")), (Temporary1));
-    result_570425907 = undefined;
-    break BeforeRet;
-  };
-
-  return result_570425907;
-
-}
-
-function HEX3Aanonymous__manifest95bundles_u523() {
-    this.goNext0.destroy();
-    (makeGameScreen__manifest95bundles_u26());
+    var HEX3Aenv_570425820 = null;
+    HEX3Aenv_570425820 = {m_type: NTI570425547, HEX3Aup: null};
+    HEX3Aenv_570425820.HEX3Aup = this;
+    document.body.appendChild(this.app0.canvas);
+    PIXI.Assets.add(innerHEX60gensym23__multi95loading_u102());
+    PIXI.Assets.add(innerHEX60gensym38__multi95loading_u141());
+    var texturesPromise_570425530 = PIXI.Assets.load([("flowerTop"), ("eggHead")]);
+    Temporary1 = HEX3Aanonymous__multi95loading_u187.bind(HEX3Aenv_570425820); Temporary1.ClP_0 = HEX3Aanonymous__multi95loading_u187; Temporary1.ClE_0 = HEX3Aenv_570425820;
+    texturesPromise_570425530.then(Temporary1);
 
   
 }
-async function makeLoadScreen__manifest95bundles_u24() {
+var Temporary1;
+async function HEX3Aanonymous__multi95loading_u27(e_p0) {
     var Temporary1;
 
-  var result_570425741 = null;
+    var HEX3Aenv_570425819 = null;
+    HEX3Aenv_570425819 = {m_type: NTI570425545, app0: null};
+    HEX3Aenv_570425819.app0 = (new PIXI.Application());
+    Temporary1 = HEX3Aanonymous__multi95loading_u96.bind(HEX3Aenv_570425819); Temporary1.ClP_0 = HEX3Aanonymous__multi95loading_u96; Temporary1.ClE_0 = HEX3Aenv_570425819;
+    HEX3Aenv_570425819.app0.init(innerHEX60gensym9__multi95loading_u54()).then(Temporary1);
 
-  BeforeRet: {
-    var HEX3Aenv_570426104 = null;
-    HEX3Aenv_570426104 = {m_type: NTI570425695, goNext0: null};
-    var loadScreenAssets_570425755 = (await PIXI.Assets.loadBundle(("load-screen")));
-    HEX3Aenv_570426104.goNext0 = (new PIXI.Sprite(loadScreenAssets_570425755.flowerTop));
-    HEX3Aenv_570426104.goNext0.anchor.set((0.5));
-    HEX3Aenv_570426104.goNext0.x = (app_570425375.screen.width / 2);
-    HEX3Aenv_570426104.goNext0.y = (app_570425375.screen.height / 2);
-    app_570425375.stage.addChild((HEX3Aenv_570426104.goNext0));
-    HEX3Aenv_570426104.goNext0.eventMode = ("static");
-    HEX3Aenv_570426104.goNext0.cursor = ("pointer");
-    Temporary1 = HEX3Aanonymous__manifest95bundles_u523.bind(HEX3Aenv_570426104); Temporary1.ClP_0 = HEX3Aanonymous__manifest95bundles_u523; Temporary1.ClE_0 = HEX3Aenv_570426104;
-    HEX3Aenv_570426104.goNext0.on((("pointertap")), (Temporary1));
-    result_570425741 = undefined;
-    break BeforeRet;
-  };
-
-  return result_570425741;
-
+  
 }
-async function init__manifest95bundles_u33() {
-    var Temporary1;
-
-  var result_570425379 = null;
-
-  BeforeRet: {
-    var HEX3Aenv_570426053 = null;
-    HEX3Aenv_570426053 = {m_type: NTI570425666, manifestExample0: null};
-    (await app_570425375.init(innerHEX60gensym12__manifest95bundles_u53()));
-    document.body.appendChild(app_570425375.canvas);
-    HEX3Aenv_570426053.manifestExample0 = innerHEX60gensym24__manifest95bundles_u104();
-    Temporary1 = innerHEX60gensym87__manifest95bundles_u303.bind(HEX3Aenv_570426053); Temporary1.ClP_0 = innerHEX60gensym87__manifest95bundles_u303; Temporary1.ClE_0 = HEX3Aenv_570426053;
-    (await PIXI.Assets.init(Temporary1()));
-    PIXI.Assets.backgroundLoadBundle([("load-screen"), ("game-screen")]);
-    (makeLoadScreen__manifest95bundles_u24());
-    result_570425379 = undefined;
-    break BeforeRet;
-  };
-
-  return result_570425379;
-
-}
-var app_570425375 = (new PIXI.Application());
-(init__manifest95bundles_u33());
+Temporary1 = HEX3Aanonymous__multi95loading_u27.bind(null); Temporary1.ClP_0 = HEX3Aanonymous__multi95loading_u27; Temporary1.ClE_0 = null;
+window.onload = Temporary1;
