@@ -4,18 +4,14 @@ var excHandler = 0;
 var lastJSError = null;
 var objectID_805306546 = [0];
 
-function innerHEX60gensym17__main_u54() {
+function innerHEX60gensym9__particles_u54() {
   var result_570425399 = null;
 
   BeforeRet: {
     var a_570425400 = null;
     a_570425400 = {};
-    a_570425400.width = 800;
-    a_570425400.height = 600;
-    a_570425400.backgroundColor = 65280;
-    a_570425400.antialias = true;
-    a_570425400.resolution = 1;
-    a_570425400.preference = "webgl";
+    a_570425400.autoStart = false;
+    a_570425400.resizeTo = window;
     result_570425399 = a_570425400;
     break BeforeRet;
   };
@@ -24,15 +20,47 @@ function innerHEX60gensym17__main_u54() {
 
 }
 var Temporary1;
-async function HEX3Aanonymous__main_u30(e_p0) {
-    var app_570425385 = new PIXI.Application();
-    (await app_570425385.init(innerHEX60gensym17__main_u54()));
+async function HEX3Aanonymous__particles_u27(e_p0) {
+    var app_570425385 = (new PIXI.Application());
+    (await app_570425385.init(innerHEX60gensym9__particles_u54()));
     document.body.appendChild(app_570425385.canvas);
-    var texture_570425499 = (await PIXI.Assets.load("assets/dog.jpg"));
-    var sprite_570425500 = new PIXI.Sprite(texture_570425499);
-    app_570425385.stage.addChild((sprite_570425500));
+    ((await PIXI.Assets.load("https://pixijs.com/assets/spritesheet/mc.json")));
+    var explosionTextures_570425447 = [];
+    Label1: {
+      var i_570425452 = 0;
+      var i_570425715 = 0;
+      Label2: {
+          Label3: while (true) {
+          if (!(i_570425715 < 26)) break Label3;
+            i_570425452 = i_570425715;
+            var texture_570425456 = PIXI.Texture.from((("Explosion_Sequence_A " + String((i_570425452 + 1))) + ".png"));
+            explosionTextures_570425447.push(texture_570425456);;
+            i_570425715 += 1;
+          }
+      };
+    };
+    Label4: {
+      var i_570425465 = 0;
+      var i_570425718 = 0;
+      Label5: {
+          Label6: while (true) {
+          if (!(i_570425718 < 50)) break Label6;
+            i_570425465 = i_570425718;
+            var explosion_570425469 = (new PIXI.AnimatedSprite(explosionTextures_570425447));
+            explosion_570425469.x = (Math.random() * app_570425385.screen.width);
+            explosion_570425469.y = (Math.random() * app_570425385.screen.height);
+            explosion_570425469.anchor.set((0.5));
+            explosion_570425469.rotation = (Math.random() * Math.PI);
+            explosion_570425469.scale.set(((0.75 + (Math.random() * 0.5))));
+            explosion_570425469.gotoAndPlay((((Math.random() * 26) | 0)));
+            app_570425385.stage.addChild((explosion_570425469));
+            i_570425718 += 1;
+          }
+      };
+    };
+    app_570425385.start();
 
   
 }
-Temporary1 = HEX3Aanonymous__main_u30.bind(null); Temporary1.ClP_0 = HEX3Aanonymous__main_u30; Temporary1.ClE_0 = null;
+Temporary1 = HEX3Aanonymous__particles_u27.bind(null); Temporary1.ClP_0 = HEX3Aanonymous__particles_u27; Temporary1.ClE_0 = null;
 window.onload = Temporary1;
