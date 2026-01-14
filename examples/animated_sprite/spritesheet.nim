@@ -5,7 +5,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   let app = Application()
 
   # Initialize the application
-  await app.init(
+  await app.ApplicationInit(
     JsObject{
         background: "#1099bb".js,
         resizeTo: window,
