@@ -26,6 +26,9 @@ proc TextureFrom*(_: JsObject): JsObject {.importjs: "PIXI.Texture.from(#)".}
 proc TextureThen*(_: Future[JsObject], _: proc(_: JsObject)) {.importjs: "#.then(#)".}
 var TextureWHITE* {.importc: "PIXI.Texture.WHITE".}: JsObject
 
+# text
+proc Text*(_: JsObject): JsObject {.importjs: "new PIXI.Text(#)".}
+
 # sprite
 proc Sprite*(_: JsObject): JsObject {.importjs: "new PIXI.Sprite(#)".}
 proc SpriteFrom*( _: JsObject): JsObject {.importjs: "PIXI.Sprite.from(#)".}

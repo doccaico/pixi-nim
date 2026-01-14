@@ -5,10 +5,10 @@ import pixi
 
 dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Create a new application
-  let app = jsNew Application()
+  let app = Application()
 
   # Initialize the application
-  await app.init(
+  await app.ApplicationInit(
     JsObject{
         antialias: true,
         backgroundColor: "white".js,
@@ -21,8 +21,8 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Append the application canvas to the document body
   document.body.appendChild(app.canvas)
 
-  let pandaTexture = await Assets.load("https://pixijs.com/assets/panda.png".js)
-  let rainbowGradient = await Assets.load("https://pixijs.com/assets/rainbow-gradient.png".js)
+  let pandaTexture = await AssetsLoad("https://pixijs.com/assets/panda.png".js)
+  let rainbowGradient = await AssetsLoad("https://pixijs.com/assets/rainbow-gradient.png".js)
 
   let allBlendModes = [
     "normal".js,
@@ -57,9 +57,9 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   var pandas: seq[JsObject]
 
   for i in 0..<allBlendModes.len:
-    let container = jsNew Container()
+    let container = Container()
 
-    let sprite = jsNew Sprite(JsObject{
+    let sprite = Sprite(JsObject{
       texture: pandaTexture,
       width: 100,
       height: 100,
@@ -69,7 +69,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
 
     pandas.add(sprite)
 
-    let sprite2 = jsNew Sprite(JsObject{
+    let sprite2 = Sprite(JsObject{
       texture: rainbowGradient,
       width: size,
       height: size,
@@ -78,7 +78,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
 
     container.addChild(sprite, sprite2)
 
-    let text = jsNew Text(JsObject{
+    let text = Text(JsObject{
       text: allBlendModes[i],
       style: JsObject{
         fontSize: 16,
@@ -89,7 +89,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
     # Add blend mode text labels
     text.x = size / 2 - text.width / 2
     text.y = size - text.height
-    let textBackground = jsNew Sprite(Texture.WHITE)
+    let textBackground = Sprite(TextureWHITE)
 
     textBackground.x = text.x - 2
     textBackground.y = text.y
@@ -100,7 +100,7 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
     app.stage.addChild(container)
 
     container.x = (i mod 5) * size
-    container.y = Math.floor(i / 5) * size
+    container.y = MathFloor(i / 5) * size
 
   app.ticker.add(
     proc =
