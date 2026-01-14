@@ -1,8 +1,8 @@
-## pixi
+## pixi-nim
 
 ### Try
 ```
-nim js -d:danger main.nim
+nim js -d:danger -o:main.js examples\animated_sprite\animation.nim
 
 python -m http.server
 
