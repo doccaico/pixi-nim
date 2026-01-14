@@ -2,13 +2,11 @@
 var framePtr = null;
 var excHandler = 0;
 var lastJSError = null;
-var NTI570425544 = {size: 0, kind: 22, base: null, node: null, finalizer: null};
-var NTI570425547 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33555167 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI33555177 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI738197610 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NTI738197602 = {size: 0, kind: 22, base: null, node: null, finalizer: null};
-var NTI570425545 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
+var NTI570425467 = {size: 0, kind: 17, base: null, node: null, finalizer: null};
 var NNI738197610 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
 NTI738197610.node = NNI738197610;
 var NNI33555177 = {kind: 2, len: 0, offset: 0, typ: null, name: null, sons: []};
@@ -18,16 +16,12 @@ NTI33555167.node = NNI33555167;
 NTI33555177.base = NTI33555167;
 NTI738197610.base = NTI33555177;
 NTI738197602.base = NTI738197610;
-var NNI570425545 = {kind: 1, offset: "app0", len: 0, typ: NTI738197602, name: "app0", sons: null};
-NTI570425545.node = NNI570425545;
-NTI570425545.base = NTI33555167;
-NTI570425544.base = NTI570425545;
-var NNI570425547 = {kind: 1, offset: "HEX3Aup", len: 0, typ: NTI570425544, name: ":up", sons: null};
-NTI570425547.node = NNI570425547;
-NTI570425547.base = NTI33555167;
+var NNI570425467 = {kind: 1, offset: "app0", len: 0, typ: NTI738197602, name: "app0", sons: null};
+NTI570425467.node = NNI570425467;
+NTI570425467.base = NTI33555167;
 var objectID_805306546 = [0];
 
-function innerHEX60gensym9__multi95loading_u54() {
+function innerHEX60gensym9__promises_u54() {
   var result_570425399 = null;
 
   BeforeRet: {
@@ -43,79 +37,29 @@ function innerHEX60gensym9__multi95loading_u54() {
 
 }
 
-function innerHEX60gensym23__multi95loading_u102() {
-  var result_570425447 = null;
-
-  BeforeRet: {
-    var a_570425448 = null;
-    a_570425448 = {};
-    a_570425448.alias = ("flowerTop");
-    a_570425448.src = ("https://pixijs.com/assets/flowerTop.png");
-    result_570425447 = a_570425448;
-    break BeforeRet;
-  };
-
-  return result_570425447;
-
-}
-
-function innerHEX60gensym38__multi95loading_u141() {
-  var result_570425486 = null;
-
-  BeforeRet: {
-    var a_570425487 = null;
-    a_570425487 = {};
-    a_570425487.alias = ("eggHead");
-    a_570425487.src = ("https://pixijs.com/assets/eggHead.png");
-    result_570425486 = a_570425487;
-    break BeforeRet;
-  };
-
-  return result_570425486;
-
-}
-
-function HEX3Aanonymous__multi95loading_u187(textures_p0) {
-    var flower_570425536 = PIXI.Sprite.from(textures_p0.flowerTop);
-    flower_570425536.anchor.set((0.5));
-    flower_570425536.x = (this.HEX3Aup.app0.screen.width * 0.25);
-    flower_570425536.y = (this.HEX3Aup.app0.screen.height / 2);
-    this.HEX3Aup.app0.stage.addChild((flower_570425536));
-    var egg_570425612 = PIXI.Sprite.from(textures_p0.eggHead);
-    egg_570425612.anchor.set((0.5));
-    egg_570425612.x = (this.HEX3Aup.app0.screen.width * 0.75);
-    egg_570425612.y = (this.HEX3Aup.app0.screen.height / 2);
-    this.HEX3Aup.app0.stage.addChild((egg_570425612));
-
-  
-}
-
-function HEX3Aanonymous__multi95loading_u96() {
-    var Temporary1;
-
-    var HEX3Aenv_570425820 = null;
-    HEX3Aenv_570425820 = {m_type: NTI570425547, HEX3Aup: null};
-    HEX3Aenv_570425820.HEX3Aup = this;
-    document.body.appendChild(this.app0.canvas);
-    PIXI.Assets.add(innerHEX60gensym23__multi95loading_u102());
-    PIXI.Assets.add(innerHEX60gensym38__multi95loading_u141());
-    var texturesPromise_570425530 = PIXI.Assets.load([("flowerTop"), ("eggHead")]);
-    Temporary1 = HEX3Aanonymous__multi95loading_u187.bind(HEX3Aenv_570425820); Temporary1.ClP_0 = HEX3Aanonymous__multi95loading_u187; Temporary1.ClE_0 = HEX3Aenv_570425820;
-    texturesPromise_570425530.then(Temporary1);
+function HEX3Aanonymous__promises_u108(resolvedTexture_p0) {
+    var bunny_570425454 = PIXI.Sprite.from(resolvedTexture_p0);
+    bunny_570425454.anchor.set((0.5));
+    bunny_570425454.x = (this.app0.screen.width / 2);
+    bunny_570425454.y = (this.app0.screen.height / 2);
+    this.app0.stage.addChild((bunny_570425454));
 
   
 }
 var Temporary1;
-async function HEX3Aanonymous__multi95loading_u27(e_p0) {
+async function HEX3Aanonymous__promises_u27(e_p0) {
     var Temporary1;
 
-    var HEX3Aenv_570425819 = null;
-    HEX3Aenv_570425819 = {m_type: NTI570425545, app0: null};
-    HEX3Aenv_570425819.app0 = (new PIXI.Application());
-    Temporary1 = HEX3Aanonymous__multi95loading_u96.bind(HEX3Aenv_570425819); Temporary1.ClP_0 = HEX3Aanonymous__multi95loading_u96; Temporary1.ClE_0 = HEX3Aenv_570425819;
-    HEX3Aenv_570425819.app0.init(innerHEX60gensym9__multi95loading_u54()).then(Temporary1);
+    var HEX3Aenv_570425626 = null;
+    HEX3Aenv_570425626 = {m_type: NTI570425467, app0: null};
+    HEX3Aenv_570425626.app0 = (new PIXI.Application());
+    (await HEX3Aenv_570425626.app0.init(innerHEX60gensym9__promises_u54()));
+    document.body.appendChild(HEX3Aenv_570425626.app0.canvas);
+    var texturePromise_570425451 = PIXI.Assets.load(("https://pixijs.com/assets/bunny.png"));
+    Temporary1 = HEX3Aanonymous__promises_u108.bind(HEX3Aenv_570425626); Temporary1.ClP_0 = HEX3Aanonymous__promises_u108; Temporary1.ClE_0 = HEX3Aenv_570425626;
+    texturePromise_570425451.then(Temporary1);
 
   
 }
-Temporary1 = HEX3Aanonymous__multi95loading_u27.bind(null); Temporary1.ClP_0 = HEX3Aanonymous__multi95loading_u27; Temporary1.ClE_0 = null;
+Temporary1 = HEX3Aanonymous__promises_u27.bind(null); Temporary1.ClP_0 = HEX3Aanonymous__promises_u27; Temporary1.ClE_0 = null;
 window.onload = Temporary1;
