@@ -16,27 +16,32 @@ dom.window.onload = proc (e: dom.Event): void {.async.} =
   document.body.appendChild(app.canvas)
 
   # Load the animation sprite sheet
-  discard await Assets.load("https://pixijs.com/assets/spritesheet/mc.json")
+  discard await Assets.load("https://pixijs.com/assets/spritesheet/fighter.json")
 
-  # Create an array to store the textures
-  var explosionTextures: seq[JsObject]
+  # Create an array of textures from the sprite sheet
+  var frames: seq[JsObject]
 
-  for i in 0..<26:
-    let texture = Texture.from("Explosion_Sequence_A ".cstring & jsString(i + 1) & ".png".cstring)
-    explosionTextures.add(texture)
+  for i in 0..<30:
+    let val = if i < 10: "0".cstring & jsString(i) else: jsString(i)
+    # Magically works since the spritesheet was loaded with the pixi loader
+    frames.add(Texture.from("rollSequence00".cstring & val & ".png".cstring))
 
-  # Create and randomly place the animated explosion sprites on the stage
-  for i in 0..<50:
-    # Create an explosion AnimatedSprite
-    let explosion = jsNew AnimatedSprite(explosionTextures)
+  # Create an AnimatedSprite (brings back memories from the days of Flash, right ?)
+  let anim = jsNew AnimatedSprite(frames)
 
-    explosion.x = Math.random() * app.screen.width
-    explosion.y = Math.random() * app.screen.height
-    explosion.anchor.set(0.5)
-    explosion.rotation = Math.random() * Math.PI
-    explosion.scale.set(0.75 + Math.random() * 0.5)
-    explosion.gotoAndPlay((Math.random() * 26) | 0)
-    app.stage.addChild(explosion)
+  #[
+   * An AnimatedSprite inherits all the properties of a PIXI sprite
+   * so you can change its position, its anchor, mask it, etc
+  ]#
+  anim.x = app.screen.width / 2
+  anim.y = app.screen.height / 2
+  anim.anchor.set(0.5)
+  anim.animationSpeed = 0.5
+  anim.play()
 
-  # Start animating
-  app.start()
+  app.stage.addChild(anim);
+
+  # Animate the rotation
+  app.ticker.add(
+    proc = anim.rotation += 0.01
+  )
