@@ -33,6 +33,9 @@ proc Text*(_: JsObject): JsObject {.importjs: "new PIXI.Text(#)".}
 proc Sprite*(_: JsObject): JsObject {.importjs: "new PIXI.Sprite(#)".}
 proc SpriteFrom*( _: JsObject): JsObject {.importjs: "PIXI.Sprite.from(#)".}
 
+# graphics
+proc Graphics*(): JsObject {.importjs: "new PIXI.Graphics()".}
+
 # color
 proc Color*(_: ColorSource): Color {.importjs: "new PIXI.Color(#)".}
 
