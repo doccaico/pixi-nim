@@ -46,3 +46,4 @@ proc Container*(): JsObject {.importjs: "new PIXI.Container()".}
 var MathPI* {.importjs: "Math.PI".}: JsObject
 proc MathRandom*(): JsObject {.importjs: "Math.random()".}
 proc MathFloor*(_: SomeNumber): JsObject {.importjs: "Math.floor(#)".}
+proc MathSin*(_: SomeFloat): JsObject {.importjs: "Math.sin(#)".}
