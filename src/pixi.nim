@@ -45,6 +45,14 @@ proc AnimatedSprite*(_: openArray[JsObject]): JsObject {.importjs: "new PIXI.Ani
 # container
 proc Container*(): JsObject {.importjs: "new PIXI.Container()".}
 
+# blurfilter
+proc BlurFilter*(_: JsObject): JsObject {.importjs: "new PIXI.BlurFilter(#)".} 
+
+# rectangle
+proc Rectangle*(_, _, _, _: SomeNumber | JsObject): JsObject {.importjs: "new PIXI.Rectangle(#, #, #, #)".} 
+
+var SCALE_MODES* {.importjs: "SCALE_MODES".}: JsObject
+
 # math
 var MathPI* {.importjs: "Math.PI".}: JsObject
 proc MathRandom*(): JsObject {.importjs: "Math.random()".}
