@@ -1,7 +1,4 @@
-import pixi
-
-# Require
-# <script src="https://cdn.jsdelivr.net/npm/pixi.js@8.15.0/dist/packages/advanced-blend-modes.min.js"></script>
+import ../../src/pixi
 
 dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Create a new application

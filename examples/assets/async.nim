@@ -1,4 +1,4 @@
-import PIXI
+import ../../src/pixi
 
 proc init {.async.} =
   # Create a new application

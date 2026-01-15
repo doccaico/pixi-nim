@@ -1,4 +1,4 @@
-import PIXI
+import ../../src/pixi
 
 dom.window.onload = proc (e: dom.Event): void {.async.} =
   # Create a new application

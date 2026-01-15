@@ -1,4 +1,4 @@
-import PIXI
+import ../../src/pixi
 
 proc makeLoadScreen {.async.}
 proc makeGameScreen {.async.}
